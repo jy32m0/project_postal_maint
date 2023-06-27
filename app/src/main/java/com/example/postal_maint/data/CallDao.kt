@@ -26,7 +26,7 @@ interface CallDao {
     fun getCall(id: Long): Flow<CallEntity?>
 
     @Query("SELECT * FROM call_table ORDER BY callID DESC")
-    fun getAllFlow(): Flow<List<CallEntity>>
+    fun getAllCall(): Flow<List<CallEntity>>
 
     @Query("SELECT * FROM call_table ORDER BY callID DESC LIMIT 1")
     fun getLastCall(): Flow<CallEntity?>
